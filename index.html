@@ -396,6 +396,36 @@ footer {
     transition: none !important;
   }
 }
+.girl-container {
+  position: absolute;
+  right: -10px;
+  top: 15px;
+  width: 45%;
+  max-width: 390px;
+  height: 90%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 45% 45% 25px 25px;
+  opacity: 0.72;
+  mask-image: linear-gradient(to left, black 45%, transparent 100%);
+}
+
+.girl {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1) contrast(1.1);
+}
+
+@media (max-width: 500px) {
+  .girl-container {
+    width: 60%;
+    right: -5px;
+    opacity: 0.42;
+  }
+}
 </style>
 </head>
 
@@ -411,7 +441,9 @@ footer {
     <span>● ONLINE</span>
   </div>
 
-  <header class="hero">
+  <header class="hero"><div class="girl-container">
+  <img src="assets/girl.png" alt="" class="girl">
+</div>
     <span class="sticker one">✦</span>
     <span class="sticker two">♡</span>
 
